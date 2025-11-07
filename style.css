@@ -5,7 +5,7 @@ main {
 }
 
 main, html {
-  min-height: calc(100vh - 337.7px);
+    min-height: calc(100vh - 337.7px);
 }
 
 body {
@@ -25,12 +25,12 @@ p {
 }
 
 .header {
-  display: grid;
-  height: 200px;
-  width: auto;
-  position: sticky;
-  display: flex;
-  align-items: center;
+    display: grid;
+    height: 200px;
+    width: auto;
+    position: sticky;
+    display: flex;
+    align-items: center;
 }
 
 .logo-area {
