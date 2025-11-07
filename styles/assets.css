@@ -1,0 +1,48 @@
+input {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    padding-left: 16px;
+    outline: none;
+    border-radius: 25px;
+    color: #515151;
+    width: 200px;
+    font-family: "Jost";
+    font-weight: 300;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #bababa;
+}
+
+.submit-button {
+    border: none;
+    background-color: transparent;
+    padding: 8px;
+    font-size: 16px;
+    outline: 1.5px solid #515151;
+    border-radius: 25px;
+    color: #515151;
+    width: 100px;
+    font-family: "Jost";
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.load-button {
+    border: none;
+    background-color: transparent;
+    padding: 8px;
+    font-size: 16px;
+    outline: 1.5px solid #515151;
+    border-radius: 25px;
+    color: #515151;
+    width: 200px;
+    font-family: "Jost";
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer;
+}

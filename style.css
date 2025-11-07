@@ -1,0 +1,92 @@
+main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main, html {
+  min-height: calc(100vh - 337.7px);
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Jost';
+    color: #515151;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.header {
+  display: grid;
+  height: 200px;
+  width: auto;
+  position: sticky;
+  display: flex;
+  align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;  
+    align-items: center;
+    justify-content: center; 
+    gap: 14px;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 160px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.ball {
+    height: 28px; 
+}
+
+#searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.main-card-area {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.load-button-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.footer-ball{
+    height: 22px; 
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    height: 100px;
+}
