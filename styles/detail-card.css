@@ -22,7 +22,7 @@ dialog::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('../assets/icons/pokeball.svg') no-repeat left 110px top 20px;
+  background: url('../assets/icons/pokeball.svg') no-repeat left 110px top 16px;
   background-size: 80%;
   opacity: 0.072;
   pointer-events: none;
@@ -95,4 +95,17 @@ dialog::before {
 .arrow-icon {
   height: 20px;
   cursor: pointer;
+}
+
+.white-area {
+  position: absolute;
+  top: 295px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  z-index: 1;
 }
