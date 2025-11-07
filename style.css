@@ -49,10 +49,6 @@ p {
     padding-bottom: 20px;
 }
 
-.ball {
-    height: 28px; 
-}
-
 #searchArea {
     display: flex;
     justify-content: center;
@@ -65,17 +61,17 @@ p {
 .main-card-area {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 4rem;
+    gap: 1rem;
     max-width: 1320px;
     margin: 0 auto;
-    padding: 4rem;
+    padding: 1rem;
 }
 
 .load-button-area {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 60px;
 }
 

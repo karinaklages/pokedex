@@ -32,6 +32,10 @@ input::placeholder {
     background-color: transparent;
 }
 
+.submit-button:hover {
+    background-color: #eaeaea;
+}
+
 .load-button {
     border: none;
     background-color: transparent;
@@ -45,4 +49,8 @@ input::placeholder {
     font-weight: 300;
     font-size: 16px;
     cursor: pointer;
+}
+
+.load-button:hover {
+    background-color: #eaeaea;
 }

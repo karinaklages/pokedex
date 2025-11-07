@@ -1,0 +1,11 @@
+.main-card {
+    width: 240px;
+    height: 260px;
+    border-radius: 12px;
+    background-color: #c6c5a6;
+    cursor: pointer;
+}
+
+.main-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
