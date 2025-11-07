@@ -1,4 +1,6 @@
 .main-card {
+    position: relative;
+    overflow: hidden;
     width: 240px;
     height: 260px;
     border-radius: 12px;
@@ -6,6 +8,74 @@
     cursor: pointer;
 }
 
+.main-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../assets/icons/pokeball.svg') no-repeat left 28px bottom 45px;
+  background-size: 115%;
+  opacity: 0.072;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .main-card:hover {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-number {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    color: white;
+    text-align: right;
+    padding-right: 17px;
+    padding-top: 12px;
+}
+
+#pokemonImgMainCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 110px;
+    margin-top: 12px;
+}
+
+#pokemonImgMainCard img {
+    max-width: 110px;
+    max-height: 110px;
+    display: block;
+}
+
+.pokemon-name-main-card {
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.type-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.pokemon-type-button {
+    position: relative;
+    z-index: 1;
+    border: none;
+    padding: 4px 14px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: #515151;
+    font-family: "Jost";
+    font-weight: 300;
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
 }

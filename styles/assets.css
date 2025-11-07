@@ -29,7 +29,6 @@ input::placeholder {
     font-weight: 300;
     font-size: 16px;
     cursor: pointer;
-    background-color: transparent;
 }
 
 .submit-button:hover {
