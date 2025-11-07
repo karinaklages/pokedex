@@ -9,14 +9,14 @@
 }
 
 .main-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('../assets/icons/pokeball.svg') no-repeat left 28px bottom 45px;
-  background-size: 115%;
-  opacity: 0.072;
-  pointer-events: none;
-  z-index: 0;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../assets/icons/pokeball.svg') no-repeat left 28px bottom 45px;
+    background-size: 115%;
+    opacity: 0.072;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .main-card:hover {

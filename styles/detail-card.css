@@ -17,3 +17,82 @@ dialog::backdrop {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+
+dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../assets/icons/pokeball.svg') no-repeat left 110px top 20px;
+  background-size: 80%;
+  opacity: 0.072;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.close-area {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 16px; 
+  height: 30px;
+}
+
+.close-button {
+  height: 36px;
+  cursor: pointer;
+}
+
+.pokemon-number-detail-card {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 60px;
+}
+
+.pokemon-name-detail-card {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+.type-area-detail-card {
+  display: flex;
+  justify-content: start;
+  padding-left: 20px;
+  gap: 6px;
+}
+
+.pokemon-type-button-detail-card {
+  position: relative;
+  z-index: 1;
+  border: none;
+  padding: 4px 14px;
+  font-size: 16px;
+  border-radius: 25px;
+  color: #515151;
+  font-family: "Jost";
+  font-weight: 300;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+}
+
+.arrow-area {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  margin: 0 20px;
+}
+
+.arrow-icon {
+  height: 20px;
+  cursor: pointer;
+}
