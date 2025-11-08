@@ -1,4 +1,4 @@
-// Show one main card
+// Shows one main card
 // function getPokemonCard(index) {
 //     return `
 //         <div class="main-card" tabindex="0" onclick="openDialog()">
@@ -12,5 +12,11 @@
 //                 <button class="pokemon-type-button">Poison</button>
 //             </div>
 //         </div>
+//     `;
+// }
+
+
+// function dialogTemplate(index) {
+//     return `
 //     `;
 // }

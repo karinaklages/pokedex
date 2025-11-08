@@ -49,14 +49,14 @@
             <div class="main-card"></div>
             <div class="main-card"></div>
         </div>
-        
+
         <div class="load-button-area">
             <button class="load-button" id="loadButton">Load more Pokémon</button>
         </div>
 
         <dialog id="pokemonDialog" closedby="any">
             <div class="close-area">
-                <img class="close-button" src="./assets/icons/closed.png" alt="Close Dialog" onclick="closeDialog()">
+                <img class="close-button" src="./assets/icons/closed.png" alt="Close Dialog" aria-label="Close button" onclick="closeDialog()">
             </div>
             <div class="pokemon-number-detail-card"><span>#001</span></div>
             <h2 class="pokemon-name-detail-card">Bulbasaur</h2>
@@ -65,10 +65,11 @@
                 <button class="pokemon-type-button-detail-card">Poison</button>
             </div>
             <div class="arrow-area">
-                <img class="arrow-icon" src="./assets/icons/arrow-back.png" alt="Back Click">
-                <img class="arrow-icon" src="./assets/icons/arrow-forward.png" alt="Forward Click">
+                <img class="arrow-icon" src="./assets/icons/arrow-back.png" alt="Backward Click" aria-label="Backward button" onclick="prevPokemon()">
+                <img class="arrow-icon" src="./assets/icons/arrow-forward.png" alt="Forward Click" aria-label="Forward button" onclick="nextPokemon()">
             </div>
             <div class="white-area"></div>
+
             <div class="menue-detail-card">
                 <ul>
                     <li><a href="#">About</a></li>
@@ -76,9 +77,39 @@
                     <li><a href="#">Elevations</a></li>
                 </ul>
             </div>
-            <div id="about" class="tab-content">About Content</div>
-            <div id="stats" class="tab-content">Stats Content</div>
-            <div id="elevations" class="tab-content">Elevations Content</div>
+
+            <div id="about" class="tab-content" style="display:block;">
+                <table>
+                    <tr>
+                        <th>Species</th>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <th>Height</th>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <th>Abilities</th>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <th>Weakness</th>
+                        <td>xxx</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="stats" class="tab-content" style="display:none;">
+
+            </div>
+
+            <div id="elevations" class="tab-content" style="display:none;">
+                
+            </div>
         </dialog>
     </main>
     <footer>

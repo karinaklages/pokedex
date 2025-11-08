@@ -103,7 +103,7 @@ dialog::before {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: calc(100% - 50px);
+  height: 355px;
   background-color: #fff;
   border-radius: 12px;
   padding: 16px;
@@ -111,7 +111,7 @@ dialog::before {
 }
 
 .menue-detail-card {
-  padding-left: 22px;
+  padding-left: 100px;
   padding-top: 80px;
   width: 450px;
   height: 40px;
@@ -120,7 +120,7 @@ dialog::before {
 .menue-detail-card ul {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 30px;
 }
 
 .menue-detail-card li {
@@ -131,7 +131,7 @@ dialog::before {
   position: relative;
   z-index: 1;
   color: #9b9b9b;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -149,16 +149,23 @@ dialog::before {
   width: 100%;
 }
 
-/* 
 .tab-content {
   display: none;
   position: absolute;
-  top: 50px;
-  left: 0;
+  z-index: 1;
+  top: 390px;
+  left: 100px;
   right: 0;
   bottom: 0;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .tab-content.active {
   display: block;
-} */
+}
+
+.table {
+  text-align: left;
+}
