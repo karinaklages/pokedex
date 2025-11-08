@@ -110,24 +110,26 @@ dialog::before {
   z-index: 1;
 }
 
-.menue-detail-card {
+/* Menu */
+
+.menu-detail-card {
   padding-left: 100px;
   padding-top: 80px;
   width: 450px;
   height: 40px;
 }
 
-.menue-detail-card ul {
+.menu-detail-card ul {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.menue-detail-card li {
+.menu-detail-card li {
   display: inline;
 }
 
-.menue-detail-card a {
+.menu-detail-card a {
   position: relative;
   z-index: 1;
   color: #9b9b9b;
@@ -135,19 +137,22 @@ dialog::before {
   font-weight: 600;
 }
 
-.menue-detail-card a::after {
+.menu-detail-card a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -6px;
   width: 0%;
-  height: 1.5px;
-  background-color: #dbdbdb;
+  height: 3px;
+  background-color: #f1f1f1;
+  border-radius: 25px;
 }
 
-.menue-detail-card a:hover::after {
+.menu-detail-card a:hover::after {
   width: 100%;
 }
+
+/* Tabs */
 
 .tab-content {
   display: none;
@@ -166,6 +171,46 @@ dialog::before {
   display: block;
 }
 
+/* About Content */
+
 .table {
   text-align: left;
+}
+
+/* Stats Content */
+
+.progress-wrapper {
+  width: 250px;
+}
+
+.bar-info {
+  font-weight: 500;
+  font-size: 14px;
+  color: #515151;
+  text-align: left;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+
+.progress-bar span {
+  position: absolute;
+  height: 8px;
+  border-radius: 25px;
+  width: 20%;
+  background-color: #c8c8c8;
+  transform: scale(0);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100%{
+    transform: scale(1);
+  }
 }
