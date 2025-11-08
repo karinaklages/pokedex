@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./styles/main-card.css">
     <link rel="stylesheet" href="./styles/detail-card.css">
     <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/colors.css">
     <link rel="stylesheet" href="./styles/mobile.css">
     <link rel="icon" href="./assets/icons/favicon.png" type="image/png">
     
     <title>Pokedex</title>
 </head>
-<body>
+<body onload="init()">
     <header>
         <div class="logo-area">
             <img class="logo" src="./assets/icons/pokemon-logo.svg" alt="Pokemon Logo">
@@ -27,7 +28,7 @@
     </header>
     <main>
         <div class="main-card-area" id="mainCardArea">
-            <div class="main-card">
+            <div class="main-card" onclick="openDialog()">
                 <div class="pokemon-number" id="pokemonNumber"><span>#001</span></div>
                 <div id="pokemonImgMainCard">
                     <img src="./assets/icons/pokemon-logo.svg" alt="">
@@ -52,9 +53,9 @@
             <button class="load-button" id="loadButton">Load more Pokémon</button>
         </div>
 
-        <dialog open>
+        <dialog id="pokemonDialog" closedby="any">
             <div class="close-area">
-                <img class="close-button" src="./assets/icons/closed.png" alt="Close Dialog">
+                <img class="close-button" src="./assets/icons/closed.png" alt="Close Dialog" onclick="closeDialog()">
             </div>
             <div class="pokemon-number-detail-card"><span>#001</span></div>
             <h2 class="pokemon-name-detail-card">Bulbasaur</h2>

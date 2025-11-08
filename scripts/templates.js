@@ -1,7 +1,7 @@
 // Template to show one main Pokemon card
 // function getPokemonCard(index) {
 //     return `
-//         <div class="main-card" tabindex="0">
+//         <div class="main-card" tabindex="0" onclick="openDialog()">
 //             <div class="pokemon-number" id="pokemonNumber"><span>#001</span></div>
 //             <div id="pokemonImgMainCard">
 //                 <img src="./assets/icons/pokemon-logo.svg" alt="">
