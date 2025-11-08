@@ -13,6 +13,6 @@ function openDialog() {
 }
 
 function closeDialog() {
-    document.getElementById("pokemonDialog").close();
     document.body.style.overflow = "";
+    document.getElementById("pokemonDialog").close();
 }

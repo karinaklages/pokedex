@@ -1,4 +1,4 @@
-// Template to show one main Pokemon card
+// Show one main card
 // function getPokemonCard(index) {
 //     return `
 //         <div class="main-card" tabindex="0" onclick="openDialog()">

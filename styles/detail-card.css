@@ -109,3 +109,56 @@ dialog::before {
   padding: 16px;
   z-index: 1;
 }
+
+.menue-detail-card {
+  padding-left: 22px;
+  padding-top: 80px;
+  width: 450px;
+  height: 40px;
+}
+
+.menue-detail-card ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.menue-detail-card li {
+  display: inline;
+}
+
+.menue-detail-card a {
+  position: relative;
+  z-index: 1;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menue-detail-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1.5px;
+  background-color: #dbdbdb;
+}
+
+.menue-detail-card a:hover::after {
+  width: 100%;
+}
+
+/* 
+.tab-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tab-content.active {
+  display: block;
+} */
