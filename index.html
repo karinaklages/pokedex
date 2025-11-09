@@ -72,13 +72,13 @@
 
             <div class="menu-detail-card">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Stats</a></li>
-                    <li><a href="#">Elevations</a></li>
+                    <li><a href="#" onclick="showTabContentDetailCard('about')">About</a></li>
+                    <li><a href="#" onclick="showTabContentDetailCard('stats')">Stats</a></li>
+                    <li><a href="#" onclick="showTabContentDetailCard('evolutions')">Evolutions</a></li>
                 </ul>
             </div>
 
-            <div id="about" class="tab-content" style="display:none;">
+            <div id="about" class="tab-content content active">
                 <table>
                     <tr>
                         <th>Species</th>
@@ -103,7 +103,7 @@
                 </table>
             </div>
 
-            <div id="stats" class="tab-content progress-wrapper" style="display:block;">
+            <div id="stats" class="tab-content progress-wrapper content">
                 <div class="class-bar">
                     <div class="bar-info">
                         <span>HP</span>
@@ -146,7 +146,7 @@
                 </div>
             </div>
 
-            <div id="elevations" class="tab-content" style="display:none;">
+            <div id="evolutions" class="tab-content content">
                 
             </div>
         </dialog>
