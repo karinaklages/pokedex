@@ -216,10 +216,10 @@ dialog::before {
   position: absolute;
   height: 8px;
   border-radius: 25px;
-  width: 20%;
   background-color: #c8c8c8;
   transform: scale(0);
   animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  color: transparent;
 }
 
 @keyframes animate {

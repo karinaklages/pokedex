@@ -102,5 +102,48 @@ function getDialogTemplate(index) {
                 </tr>
             </table>
         </div>
+
+        <div id="stats" class="tab-content progress-wrapper content">
+            <div class="class-bar">
+                <div class="bar-info">
+                    <span>HP</span>
+                </div>
+                <div class="progress-bar">
+                    <span class="hp">${loadedPokemon[index].stats[0].base_stat}</span>
+                </div>
+            </div>
+            <div class="class-bar">
+                <div class="bar-info">
+                    <span>Attack</span>
+                </div>
+                <div class="progress-bar">
+                    <span class="attack">${loadedPokemon[index].stats[1].base_stat}</span>
+                </div>
+            </div>
+            <div class="class-bar">
+                <div class="bar-info">
+                    <span>Defense</span>
+                </div>
+                <div class="progress-bar">
+                    <span class="defense">${loadedPokemon[index].stats[2].base_stat}</span>
+                </div>
+            </div>
+            <div class="class-bar">
+                <div class="bar-info">
+                    <span>Special Attack</span>
+                </div>
+                <div class="progress-bar">
+                    <span class="special-attack">${loadedPokemon[index].stats[3].base_stat}</span>
+                </div>
+            </div>
+            <div class="class-bar">
+                <div class="bar-info">
+                    <span>Special Defense</span>
+                </div>
+                <div class="progress-bar">
+                    <span class="special-defense">${loadedPokemon[index].stats[4].base_stat}</span>
+                </div>
+            </div>
+        </div>
     `;
 }
