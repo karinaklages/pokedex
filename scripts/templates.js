@@ -45,7 +45,7 @@ function getPokemonCard(index) {
 // ${loadedPokemon[index].sprites.other.home.front_shiny}
 
 
-// function dialogTemplate(index) {
+// function getDialogTemplate(index) {
 //     return `
 //     `;
 // }
