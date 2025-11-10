@@ -24,7 +24,7 @@ function getPokemonCard(index) {
     const backgroundColor = colorType[loadedPokemon[index].types[0].type.name] || "#c6c5a6";
 
     return `
-        <div class="main-card" tabindex="0" onclick="openDialog()" style="background-color: ${backgroundColor}">
+        <div class="main-card" tabindex="0" onclick="openDialog(${index})" style="background-color: ${backgroundColor}">
             <div class="pokemon-number"><span>#${loadedPokemon[index].id}</span></div>
             <div id="pokemonImgMainCard">
                 <img src="${loadedPokemon[index].sprites.other["official-artwork"].front_default}" alt="Pokémon Illustration">
@@ -45,7 +45,62 @@ function getPokemonCard(index) {
 // ${loadedPokemon[index].sprites.other.home.front_shiny}
 
 
-// function getDialogTemplate(index) {
-//     return `
-//     `;
-// }
+function getDialogTemplate(index) {
+    const backgroundColor = colorType[loadedPokemon[index].types[0].type.name] || "#c6c5a6";
+
+    return `
+        <div class="detail-card-background" style="background-color: ${backgroundColor}">
+            <div class="close-area">
+                <img class="close-button" src="./assets/icons/closed.png" alt="Close Dialog" aria-label="Close button" onclick="closeDialog()">
+            </div>
+            <div class="pokemon-number-detail-card"><span>#${loadedPokemon[index].id}</span></div>
+            <h2 class="pokemon-name-detail-card">${loadedPokemon[index].name}</h2>
+            <div class="type-area-detail-card">
+                <button class="pokemon-type-button">${loadedPokemon[index].types[0].type.name}</button>
+                ${
+                    loadedPokemon[index].types[1]
+                    ? `<button class="pokemon-type-button">${loadedPokemon[index].types[1].type.name}</button>`
+                    : ""
+                }
+            </div>
+            <div class="arrow-area">
+                <img class="arrow-icon" src="./assets/icons/arrow-back.png" alt="Backward Click" aria-label="Backward button" onclick="prevPokemon()">
+                <img class="arrow-icon" src="./assets/icons/arrow-forward.png" alt="Forward Click" aria-label="Forward button" onclick="nextPokemon()">
+            </div>
+            <div class="white-area"></div>
+        </div>
+
+        <div class="menu-detail-card">
+            <ul>
+                <li><a href="#" onclick="showTabContentDetailCard('about')">About</a></li>
+                <li><a href="#" onclick="showTabContentDetailCard('stats')">Stats</a></li>
+                <li><a href="#" onclick="showTabContentDetailCard('evolutions')">Evolutions</a></li>
+            </ul>
+        </div>
+
+        <div id="about" class="tab-content content active">
+            <table>
+                <tr>
+                    <th>Experience</th>
+                    <td>${loadedPokemon[index].base_experience}</td>
+                </tr>
+                <tr>
+                    <th>Height</th>
+                    <td>${loadedPokemon[index].height} dm</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td>${loadedPokemon[index].weight} kg</td>
+                </tr>
+                <tr>
+                    <th>Best Ability</th>
+                    <td>${loadedPokemon[index].abilities[0].ability.name.toUpperCase()}</td>
+                </tr>
+                <tr>
+                    <th>Top Move</th>
+                    <td>${loadedPokemon[index].moves[0].move.name.toUpperCase()}</td>
+                </tr>
+            </table>
+        </div>
+    `;
+}

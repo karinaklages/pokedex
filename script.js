@@ -38,7 +38,7 @@ async function fetchPokemon() {
         const data = await response.json();
         const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
         loadedPokemon = await Promise.all(detailPromises);
-        // console.log(loadedPokemon);
+        console.log(loadedPokemon);
         renderPokemon();
     } catch (error) {   
         console.error(error);
@@ -101,7 +101,8 @@ function renderDialog(index) {
     placeDialog.innerHTML += getDialogTemplate(index);
 }
 
-function openDialog() {
+function openDialog(index) {
+    renderDialog(index);
     const dialog = document.getElementById("pokemonDialog");
     dialog.showModal();
     document.body.style.overflow = "hidden";

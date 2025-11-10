@@ -5,7 +5,6 @@ dialog {
   width: 450px;
   height: 650px;
   border-radius: 12px;
-  background-color: #d9d0bd;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -27,6 +26,10 @@ dialog::before {
   opacity: 0.072;
   pointer-events: none;
   z-index: 0;
+}
+
+.detail-card-background {
+  height: 310px;
 }
 
 .close-area {
@@ -114,7 +117,7 @@ dialog::before {
 
 .menu-detail-card {
   padding-left: 100px;
-  padding-top: 80px;
+  padding-top: 25px;
   width: 450px;
   height: 40px;
 }
