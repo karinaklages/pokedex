@@ -26,10 +26,14 @@
         </div>
     </header>
     <main>
-        <div class="main-card-area" id="mainCardArea"></div>
+        <div class="main-card-area" id="mainCardArea">
+            <div id="loading-spinner">
+                <div class="loading-spinner-circle loading"></div>
+            </div>
+        </div>
 
         <div class="load-button-area">
-            <button class="load-button" id="loadButton">Load more Pokémon</button>
+            <button class="load-button" id="loadButton" onclick="loadMorePokemon()">Load more Pokémon</button>
         </div>
 
         <dialog id="pokemonDialog" closedby="any">

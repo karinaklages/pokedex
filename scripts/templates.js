@@ -12,7 +12,7 @@ const colorType = {
     psychic: "#e2c6d0",
     rock: "#c9c0b4",
     ghost: "#acaccd",
-    ice: "#def5f5",
+    ice: "#e0efefff",
     dragon: "#b9d2d3",
     dark: "#c7c7c7ff",
     steel: "#e0e0e0",
@@ -34,7 +34,7 @@ function getPokemonCard(index) {
                 <button class="pokemon-type-button">${loadedPokemon[index].types[0].type.name}</button>
                 ${
                     loadedPokemon[index].types[1]
-                        ? `<button class="pokemon-type-button">${loadedPokemon[index].types[1].type.name}</button>`
+                    ? `<button class="pokemon-type-button">${loadedPokemon[index].types[1].type.name}</button>`
                     : ""
                 }
             </div>

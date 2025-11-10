@@ -3,11 +3,12 @@
 // ---------------------
 
 let index = 0;
+let offset = 0;
+let limit = 30;
 let currentPokemonIndex = 0;
+let loadedPokemon = [];
 
 const BASE_URL = "https://pokeapi.co/api/v2/";
-
-let loadedPokemon = [];
 
 
 // ---------------------
@@ -35,25 +36,55 @@ function init() {
 
 async function fetchPokemon() {
     try {
+        showLoadingSpinner()
+        await new Promise(resolve => setTimeout(resolve, 100));
         const response = await fetch(BASE_URL + "pokemon?limit=30&offset=0");
         const data = await response.json();
 
-        const detailPromises = data.results.map(p => fetch(p.url).then(res => res.json()));
-
+        const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
         loadedPokemon = await Promise.all(detailPromises);
-        console.log(loadedPokemon);
+        // console.log(loadedPokemon);
         renderPokemon();
-    } catch (error) {
+        hideLoadingSpinner();
+    } catch (error) {   
         console.error(error);
+        hideLoadingSpinner();
     }
 }
 
-// showLoadingSpinner()
+async function loadMorePokemon() {
+    try {
+        showLoadingSpinner()
+        const response = await fetch(`${BASE_URL}pokemon?limit=${limit}&offset=${offset}`);
+        const data = await response.json();
 
-// await
+        const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(res => res.json()));
+        const newPokemon = await Promise.all(detailPromises);
 
-// disabledloadingSpinner()
-// renderPokemon() 
+        loadedPokemon.push(...newPokemon);
+        // console.log(loadedPokemon);
+        renderPokemon();
+        hideLoadingSpinner();
+        offset += limit;
+    } catch (error) {   
+        console.error(error);
+        hideLoadingSpinner();
+    }
+}
+
+function showLoadingSpinner() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) {
+    spinner.classList.remove('hidden');
+  }
+}
+
+function hideLoadingSpinner() {
+  const spinner = document.getElementById('loading-spinner');
+  if (spinner) {
+    spinner.classList.add('hidden');
+  }
+}
 
 function renderPokemon() {
     const pokemonContent = document.getElementById("mainCardArea");
