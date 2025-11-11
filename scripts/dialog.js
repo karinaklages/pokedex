@@ -5,7 +5,8 @@ function renderDialog(index) {
 }
 
 function openDialog(index) {
-    renderDialog(index);
+    currentPokemonIndex = index;
+    renderDialog(currentPokemonIndex);
     const dialog = document.getElementById("pokemonDialog");
     dialog.showModal();
     document.body.style.overflow = "hidden";
