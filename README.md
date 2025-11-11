@@ -9,3 +9,11 @@ Pokédex is part of the Developer Akademie's training programme for software dev
 <br><br>
 
 ###
+
+![Pokédex](./assets/img/pokedex-1.jpg)<br>
+
+![Pokédex](./assets/img/pokedex-2.jpg)<br>
+
+![Pokédex](./assets/img/pokedex-3.jpg)<br>
+
+![Pokédex](./assets/img/pokedex-4.jpg)
