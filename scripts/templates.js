@@ -55,6 +55,9 @@ function getDialogTemplate(index) {
             </div>
             <div class="pokemon-number-detail-card"><span>#${loadedPokemon[index].id}</span></div>
             <h2 class="pokemon-name-detail-card">${loadedPokemon[index].name}</h2>
+            <div id="pokemonImgDetailCard">
+                <img src="${loadedPokemon[index].sprites.other["official-artwork"].front_default}" alt="Pokémon Illustration">
+            </div>
             <div class="type-area-detail-card">
                 <button class="pokemon-type-button">${loadedPokemon[index].types[0].type.name}</button>
                 ${
@@ -72,9 +75,9 @@ function getDialogTemplate(index) {
 
         <div class="menu-detail-card">
             <ul>
-                <li><a href="#" onclick="showTabContentDetailCard('about')">About</a></li>
-                <li><a href="#" onclick="showTabContentDetailCard('stats')">Stats</a></li>
-                <li><a href="#" onclick="showTabContentDetailCard('evolutions')">Evolutions</a></li>
+                <li><button onclick="showTabContentDetailCard('about')">About</button></li>
+                <li><button onclick="showTabContentDetailCard('stats')">Stats</button></li>
+                <li><button onclick="showTabContentDetailCard('evolutions')">Evolutions</button></li>
             </ul>
         </div>
 
