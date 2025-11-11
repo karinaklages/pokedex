@@ -148,5 +148,9 @@ function getDialogTemplate(index) {
                 </div>
             </div>
         </div>
+
+        <div id="evolutions" class="tab-content content">
+                
+        </div>
     `;
 }

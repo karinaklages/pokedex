@@ -73,17 +73,17 @@ async function loadMorePokemon() {
 }
 
 function showLoadingSpinner() {
-  const spinner = document.getElementById('loading-spinner');
-  if (spinner) {
-    spinner.classList.remove('hidden');
-  }
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+        spinner.classList.remove('hidden');
+    }
 }
 
 function hideLoadingSpinner() {
-  const spinner = document.getElementById('loading-spinner');
-  if (spinner) {
-    spinner.classList.add('hidden');
-  }
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+        spinner.classList.add('hidden');
+    }
 }
 
 function renderPokemon() {
@@ -93,37 +93,4 @@ function renderPokemon() {
     for (let index = 0; index < loadedPokemon.length; index++) {
         pokemonContent.innerHTML += getPokemonCard(index);
     }
-}
-
-function renderDialog(index) {
-    const placeDialog = document.getElementById("pokemonDialog")
-    placeDialog.innerHTML = "";
-    placeDialog.innerHTML += getDialogTemplate(index);
-}
-
-function openDialog(index) {
-    renderDialog(index);
-    const dialog = document.getElementById("pokemonDialog");
-    dialog.showModal();
-    document.body.style.overflow = "hidden";
-}
-
-function closeDialog() {
-    document.body.style.overflow = "";
-    document.getElementById("pokemonDialog").close();
-}
-
-function nextPokemon() {
-    currentPokemonIndex = (currentPokemonIndex + 1 ) % loadedPokemon.length;
-    renderDialog(currentPokemonIndex);
-}
-
-function prevPokemon() {
-    currentPokemonIndex = (currentPokemonIndex - 1 + loadedPokemon.length) % loadedPokemon.length;
-    renderDialog(currentPokemonIndex);
-}
-
-function showTabContentDetailCard(id) {
-  document.querySelectorAll('.content').forEach(element => element.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
 }
