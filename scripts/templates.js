@@ -77,7 +77,7 @@ function getDialogTemplate(index) {
             <ul>
                 <li><button onclick="showTabContentDetailCard('about')">About</button></li>
                 <li><button onclick="showTabContentDetailCard('stats')">Stats</button></li>
-                <li><button onclick="showTabContentDetailCard('evolutions')">Evolutions</button></li>
+                <li><button onclick="showTabContentDetailCard('speciesDetails')">Species Details</button></li>
             </ul>
         </div>
 
@@ -97,11 +97,19 @@ function getDialogTemplate(index) {
                 </tr>
                 <tr>
                     <th>Best Ability</th>
-                    <td>${loadedPokemon[index].abilities[0].ability.name.toUpperCase()}</td>
+                    <td>${loadedPokemon[index].abilities[0].ability.name
+                        .split('-')
+                        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+                        .join('-')}
+                    </td>
                 </tr>
                 <tr>
                     <th>Top Move</th>
-                    <td>${loadedPokemon[index].moves[0].move.name.toUpperCase()}</td>
+                    <td>${loadedPokemon[index].moves[0].move.name
+                        .split('-')
+                        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+                        .join('-')}
+                    </td>
                 </tr>
             </table>
         </div>
@@ -149,8 +157,29 @@ function getDialogTemplate(index) {
             </div>
         </div>
 
-        <div id="evolutions" class="tab-content content">
-                
+        <div id="speciesDetails" class="tab-content content">
+            <table>
+                <tr>
+                    <th>Color</th>
+                    <td id="color"></td>
+                </tr>
+                <tr>
+                    <th>Habitat</th>
+                    <td id="habitat"></td>
+                </tr>
+                <tr>
+                    <th>Shape</th>
+                    <td id="shape"></td>
+                </tr>
+                <tr>
+                    <th>Base Happiness</th>
+                    <td id="baseHappiness"></td>
+                </tr>
+                <tr>
+                    <th>Capture Rate</th>
+                    <td id="captureRate"></td>
+                </tr>
+            </table>   
         </div>
     `;
 }

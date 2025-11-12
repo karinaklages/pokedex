@@ -33,17 +33,17 @@ async function init() {
 async function fetchPokemon() {
     try {
         showLoadingSpinner()
-        await new Promise(resolve => setTimeout(resolve, 100));
+        // await new Promise(resolve => setTimeout(resolve, 100));
         const response = await fetch(BASE_URL + "pokemon?limit=30&offset=0");
         const data = await response.json();
         const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
         loadedPokemon = await Promise.all(detailPromises);
         console.log(loadedPokemon);
+        hideLoadingSpinner();
         renderPokemon();
     } catch (error) {   
         console.error(error);
-    }
-    hideLoadingSpinner();
+    } 
 }
 
 function isPokemonInArray(pokemonName) {
@@ -64,12 +64,12 @@ async function loadMorePokemon() {
         const uniquePokemon = filterNewPokemon(newPokemon);
         loadedPokemon.push(...uniquePokemon);
         // console.log(loadedPokemon);
+        hideLoadingSpinner();
         renderPokemon();
         offset += limit;
     } catch (error) {   
         console.error(error);
-    }
-    hideLoadingSpinner();
+    } 
 }
 
 function showLoadingSpinner() {
