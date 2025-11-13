@@ -94,23 +94,12 @@ td {
     min-height: 1700px;
 }
 
-/* #loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-} */
-
 #loading-spinner {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,8 +111,8 @@ td {
 
 .loading-spinner-circle {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: conic-gradient(#f4f4f4, #dedede, #bdbdbd);
     border-radius: 50%;
     flex-direction: column;

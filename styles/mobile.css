@@ -28,6 +28,112 @@
     }
 }
 
+@media (max-width: 490px) {
+    dialog {
+        width: 280px;
+    }
+
+    dialog::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('../assets/icons/pokeball.svg') no-repeat left 50px top 10px;
+        background-size: 100%;
+        opacity: 0.072;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .detail-card-background {
+        height: 335px;
+    }
+
+    .pokemon-number-detail-card {
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+
+    .pokemon-name-detail-card {
+        font-size: 28px;
+        text-align: center;
+        padding-top: 6px;
+        padding-bottom: 8px;
+        padding-left: 0px;
+    }
+
+    #pokemonImgDetailCard {
+        top: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 80px;
+    }
+
+    #pokemonImgDetailCard img {
+        max-width: 120px;
+        max-height: 120px;
+        display: block;
+    }
+
+    .type-area-detail-card {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        padding-left: 0px;
+    }
+
+    .arrow-area {
+        padding-top: 70px;
+        margin: 0 20px;
+    }
+
+    .white-area {
+        top: 325px;
+        height: 325px;
+    }
+
+    .menu-detail-card {
+        padding-left: 30px;
+        width: 280px;
+    }
+
+    .menu-detail-card ul {
+        list-style: none;
+        display: flex;
+        gap: 16px;
+    }
+
+    .menu-detail-card button {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .tab-content {
+        top: 410px;
+        left: 30px;
+    }
+
+    th {
+        font-weight: 500;
+        font-size: 14px;
+        color: #515151;
+        text-align: left;
+        padding-right: 24px;
+        padding-bottom: 20px;
+    }
+
+    td {
+        padding-bottom: 20px;
+    }
+
+    .progress-wrapper {
+        width: 220px;
+        height: 220px;
+        margin-top: 2px;
+    }
+}
+
 @media (max-width: 360px) {
     #searchArea {
         display: flex;

@@ -33,7 +33,7 @@ async function init() {
 async function fetchPokemon() {
     try {
         showLoadingSpinner()
-        // await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 500));
         const response = await fetch(BASE_URL + "pokemon?limit=30&offset=0");
         const data = await response.json();
         const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
