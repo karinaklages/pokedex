@@ -120,6 +120,7 @@ td {
     justify-content: center;
     align-items: center;
 }
+
 .loading-spinner-circle::after {
     position: absolute;
     inset: 0;

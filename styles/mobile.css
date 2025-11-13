@@ -31,6 +31,7 @@
 @media (max-width: 490px) {
     dialog {
         width: 280px;
+        height: 565px;
     }
 
     dialog::before {
@@ -45,12 +46,12 @@
     }
 
     .detail-card-background {
-        height: 335px;
+        height: 310px;
     }
 
     .pokemon-number-detail-card {
         text-align: center;
-        padding-top: 50px;
+        padding-top: 35px;
         padding-left: 0px;
     }
 
@@ -63,7 +64,7 @@
     }
 
     #pokemonImgDetailCard {
-        top: 180px;
+        top: 155px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -84,24 +85,25 @@
     }
 
     .arrow-area {
-        padding-top: 70px;
+        padding-top: 60px;
         margin: 0 20px;
     }
 
     .white-area {
-        top: 325px;
+        top: 290px;
         height: 325px;
     }
 
     .menu-detail-card {
         padding-left: 30px;
+        padding-top: 0px;
         width: 280px;
     }
 
     .menu-detail-card ul {
         list-style: none;
         display: flex;
-        gap: 16px;
+        gap: 16px; 
     }
 
     .menu-detail-card button {
@@ -110,7 +112,7 @@
     }
 
     .tab-content {
-        top: 410px;
+        top: 350px;
         left: 30px;
     }
 
@@ -120,17 +122,21 @@
         color: #515151;
         text-align: left;
         padding-right: 24px;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
     }
 
     td {
-        padding-bottom: 20px;
+        padding-bottom: 16px;
     }
 
     .progress-wrapper {
-        width: 220px;
+        width: 215px;
         height: 220px;
         margin-top: 2px;
+    }
+
+    .progress-bar {
+        margin-bottom: 8px;
     }
 }
 

@@ -130,7 +130,7 @@ dialog::before {
 /* Menu */
 
 .menu-detail-card {
-  padding-left: 100px;
+  padding-left: 90px;
   padding-top: 25px;
   width: 450px;
   height: 40px;
@@ -191,7 +191,7 @@ dialog::before {
   position: absolute;
   z-index: 1;
   top: 390px;
-  left: 100px;
+  left: 90px;
   right: 0;
   bottom: 0;
   color: #9b9b9b;
@@ -212,7 +212,7 @@ dialog::before {
 /* Stats Content */
 
 .progress-wrapper {
-  width: 250px;
+  width: 265px;
   height: 220px;
   margin-top: 2px;
 }
