@@ -1,7 +1,14 @@
+// function renderDialog(index) {
+//     const placeDialog = document.getElementById("pokemonDialog")
+//     placeDialog.innerHTML = "";
+//     placeDialog.innerHTML += getDialogTemplate(index);
+// }
+
 function renderDialog(index) {
-    const placeDialog = document.getElementById("pokemonDialog")
+    const placeDialog = document.getElementById("pokemonDialog");
     placeDialog.innerHTML = "";
-    placeDialog.innerHTML += getDialogTemplate(index);
+    const pokemon = loadedPokemon[index]; 
+    placeDialog.innerHTML += getDialogTemplate(pokemon);
 }
 
 function openDialog(index) {

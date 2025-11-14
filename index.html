@@ -22,7 +22,10 @@
         </a>
         <div id="searchArea">
             <input class="search-input" id="searchInput" type="text" placeholder="Search a Pokémon" required minlength="3">
-            <button class="submit-button" id="submitButton">Submit</button>
+            <button class="submit-button" id="submitButton" type="button" onclick="searchPokemonByName()">Submit</button>
+        </div>
+        <div>
+            <p class="alert d_none" id="alert">Pokémon not found. Please load more species to find it on this website.</p>
         </div>
     </header>
     <main>

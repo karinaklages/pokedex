@@ -82,6 +82,10 @@ td {
     padding-bottom: 50px;
 }
 
+.alert {
+    display: flex;
+    justify-content: center;
+}
 .main-card-area {
     position: relative;
     display: grid;
