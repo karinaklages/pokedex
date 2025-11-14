@@ -3,7 +3,7 @@
 let index = 0;
 let offset = 30;
 let limit = 30;
-let currentPokemonIndex = 0;
+let currentPokemonId = 0;
 let loadedPokemon = [];
 
 const BASE_URL = "https://pokeapi.co/api/v2/";
@@ -38,7 +38,7 @@ async function fetchPokemon() {
         const data = await response.json();
         const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
         loadedPokemon = await Promise.all(detailPromises);
-        console.log(loadedPokemon);
+        // console.log(loadedPokemon);
         renderPokemon(loadedPokemon);
     } catch (error) {   
         console.error(error);
@@ -65,7 +65,7 @@ async function loadMorePokemon() {
         const newPokemon = await Promise.all(detailPromises);
         const uniquePokemon = filterNewPokemon(newPokemon);
         loadedPokemon.push(...uniquePokemon);
-        console.log(loadedPokemon);
+        // console.log(loadedPokemon);
         renderPokemon(loadedPokemon);
         offset += limit;
     } catch (error) {   
@@ -95,7 +95,7 @@ function renderPokemon(pokemonArray) {
 
     for (let index = 0; index < pokemonArray.length; index++) {
         const pokemon = pokemonArray[index];
-        const cardHTML = getPokemonCard(index, pokemon);
+        const cardHTML = getPokemonCard(pokemon.id, pokemon);
         pokemonContent.innerHTML += cardHTML;
     }
 }

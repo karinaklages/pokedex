@@ -86,6 +86,7 @@ td {
     display: flex;
     justify-content: center;
 }
+
 .main-card-area {
     position: relative;
     display: grid;

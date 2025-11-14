@@ -1,13 +1,13 @@
-function renderDialog(index) {
+function renderDialog(id) {
     const placeDialog = document.getElementById("pokemonDialog");
     placeDialog.innerHTML = "";
-    const pokemon = loadedPokemon[index]; 
+    const pokemon = loadedPokemon.find(pokemon => pokemon.id === id);
     placeDialog.innerHTML += getDialogTemplate(pokemon);
 }
 
-function openDialog(index) {
-    currentPokemonIndex = index;
-    renderDialog(currentPokemonIndex);
+function openDialog(id) {
+    currentPokemonId = id;
+    renderDialog(currentPokemonId);
     const dialog = document.getElementById("pokemonDialog");
     dialog.showModal();
     document.body.style.overflow = "hidden";
@@ -19,13 +19,17 @@ function closeDialog() {
 }
 
 function nextPokemon() {
-    currentPokemonIndex = (currentPokemonIndex + 1 ) % loadedPokemon.length;
-    renderDialog(currentPokemonIndex);
+    const currentIndex = loadedPokemon.findIndex(pokemon => pokemon.id === currentPokemonId);
+    const nextIndex = (currentIndex + 1) % loadedPokemon.length;
+    currentPokemonId = loadedPokemon[nextIndex].id;
+    renderDialog(currentPokemonId);
 }
 
 function prevPokemon() {
-    currentPokemonIndex = (currentPokemonIndex - 1 + loadedPokemon.length) % loadedPokemon.length;
-    renderDialog(currentPokemonIndex);
+    const currentIndex = loadedPokemon.findIndex(pokemon => pokemon.id === currentPokemonId);
+    const prevIndex = (currentIndex - 1 + loadedPokemon.length) % loadedPokemon.length;
+    currentPokemonId = loadedPokemon[prevIndex].id;
+    renderDialog(currentPokemonId);
 }
 
 function showTabContentDetailCard(id) {
@@ -33,17 +37,19 @@ function showTabContentDetailCard(id) {
     document.getElementById(id).classList.add('active');
 
     if(id === 'speciesDetails') {
-        const index = currentPokemonIndex;
+        const index = currentPokemonId;
         loadPokemonSpeciesDetails(index);
     }
 }
 
-async function loadPokemonSpeciesDetails(index) {
+async function loadPokemonSpeciesDetails(id) {
+    const index = loadedPokemon.findIndex(p => p.id === id);
+    if (index === -1) return;
     const nameOrId = loadedPokemon[index].id;
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${nameOrId}/`);
     const data = await response.json();
     const speciesDetails = [ data.color.name, data.habitat?.name ?? '-', data.shape?.name ?? '-', data.base_happiness, data.capture_rate ];
-
+    
     document.getElementById('color').textContent = speciesDetails[0].split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join('-');
     document.getElementById('habitat').textContent = speciesDetails[1].split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join('-');
     document.getElementById('shape').textContent = speciesDetails[2].split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join('-');
