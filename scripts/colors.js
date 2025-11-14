@@ -1,0 +1,20 @@
+const colorType = {
+    grass: "#c4dfc1",
+    fire: "#eabaaf",
+    water: "#ccd8e8",
+    bug: "#dfd8ca",
+    normal: "#c6c5a6",
+    poison: "#d4c1dd",
+    electric: "#eadda2",
+    ground: "#d7c183",
+    fairy: "#efdad9",
+    fighting: "#f2cb9d",
+    psychic: "#e2c6d0",
+    rock: "#c9c0b4",
+    ghost: "#acaccd",
+    ice: "#e0eaea",
+    dragon: "#b9d2d3",
+    dark: "#c7c7c7",
+    steel: "#e0e0e0",
+    flying: "#e0e5f5"
+};

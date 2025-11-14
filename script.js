@@ -16,20 +16,6 @@ async function init() {
     renderPokemon(loadedPokemon);
 }
 
-// async function fetchPokemon() {
-//     const response = await fetch(BASE_URL + "pokemon?limit=30&offset=0");
-//     const data = await response.json();
-//     loadedPokemon = data.results;
-//     console.log("Pokémon geladen:", loadedPokemon);
-// }
-
-// async function fetchPokemon() {
-//     const response = await fetch(BASE_URL + "pokemon/1/");
-//     const data = await response.json();
-//     loadedPokemon = [data];
-//     console.log(loadedPokemon);
-// }
-
 async function fetchPokemon() {
     try {
         showLoadingSpinner()
@@ -38,7 +24,6 @@ async function fetchPokemon() {
         const data = await response.json();
         const detailPromises = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
         loadedPokemon = await Promise.all(detailPromises);
-        // console.log(loadedPokemon);
         renderPokemon(loadedPokemon);
     } catch (error) {   
         console.error(error);
@@ -65,7 +50,6 @@ async function loadMorePokemon() {
         const newPokemon = await Promise.all(detailPromises);
         const uniquePokemon = filterNewPokemon(newPokemon);
         loadedPokemon.push(...uniquePokemon);
-        // console.log(loadedPokemon);
         renderPokemon(loadedPokemon);
         offset += limit;
     } catch (error) {   
@@ -92,7 +76,6 @@ function hideLoadingSpinner() {
 function renderPokemon(pokemonArray) {
     const pokemonContent = document.getElementById("mainCardArea");
     pokemonContent.innerHTML = "";
-
     for (let index = 0; index < pokemonArray.length; index++) {
         const pokemon = pokemonArray[index];
         const cardHTML = getPokemonCard(pokemon.id, pokemon);

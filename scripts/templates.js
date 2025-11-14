@@ -1,27 +1,5 @@
-const colorType = {
-    grass: "#c4dfc1",
-    fire: "#eabaaf",
-    water: "#ccd8e8",
-    bug: "#dfd8ca",
-    normal: "#c6c5a6",
-    poison: "#d4c1dd",
-    electric: "#eadda2",
-    ground: "#d7c183",
-    fairy: "#efdad9",
-    fighting: "#f2cb9d",
-    psychic: "#e2c6d0",
-    rock: "#c9c0b4",
-    ghost: "#acaccd",
-    ice: "#e0eaeaff",
-    dragon: "#b9d2d3",
-    dark: "#c7c7c7ff",
-    steel: "#e0e0e0",
-    flying: "#e0e5f5"
-};
-
 function getPokemonCard(id, pokemon) {
     const backgroundColor = colorType[pokemon.types[0].type.name] || "#c6c5a6";
-
     return `
         <div class="main-card" tabindex="0" onclick="openDialog(${id})" style="background-color: ${backgroundColor}">
             <div class="pokemon-number"><span>#${pokemon.id}</span></div>
@@ -43,7 +21,6 @@ function getPokemonCard(id, pokemon) {
 
 function getDialogTemplate(pokemon) {
     const backgroundColor = colorType[pokemon.types[0].type.name] || "#c6c5a6";
-
     return `
         <div class="detail-card-background" style="background-color: ${backgroundColor}">
             <div class="close-area">
