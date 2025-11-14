@@ -1,9 +1,3 @@
-// function renderDialog(index) {
-//     const placeDialog = document.getElementById("pokemonDialog")
-//     placeDialog.innerHTML = "";
-//     placeDialog.innerHTML += getDialogTemplate(index);
-// }
-
 function renderDialog(index) {
     const placeDialog = document.getElementById("pokemonDialog");
     placeDialog.innerHTML = "";
