@@ -24,7 +24,7 @@
             <input class="search-input" id="searchInput" type="text" placeholder="Search a Pokémon" minlength="3" required>
             <button class="submit-button" id="submitButton" type="button" onclick="searchPokemonByName()">Submit</button>
         </div>
-        <div>
+        <div class="alertContainer">
             <p class="alert d_none" id="alert">Pokémon not found. Please load more species to find it on this website.</p>
         </div>
     </header>
@@ -36,7 +36,7 @@
         <div class="load-button-area">
             <button class="load-button" id="loadButton" onclick="loadMorePokemon()">Load more Pokémon</button>
         </div>
-        <dialog id="pokemonDialog" closedby="any"></dialog>
+        <dialog class="dialog" id="pokemonDialog" closedby="any"></dialog>
     </main>
     <footer>
         <div class="footer-container">
