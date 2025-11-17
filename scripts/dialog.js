@@ -18,6 +18,14 @@ function closeDialog() {
     document.getElementById("pokemonDialog").close();
 }
 
+dialog.addEventListener("close", () => {
+    document.body.style.overflow = "";
+});
+
+function closeDialog() {
+    dialog.close();
+}
+
 function nextPokemon() {
     const currentIndex = loadedPokemon.findIndex(pokemon => pokemon.id === currentPokemonId);
     const nextIndex = (currentIndex + 1) % loadedPokemon.length;

@@ -6,6 +6,7 @@ let limit = 30;
 let currentPokemonId = 0;
 let loadedPokemon = [];
 
+const dialog = document.getElementById("pokemonDialog");
 const BASE_URL = "https://pokeapi.co/api/v2/";
 
 
