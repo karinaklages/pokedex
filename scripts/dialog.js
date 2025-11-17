@@ -5,6 +5,19 @@ function renderDialog(id) {
     placeDialog.innerHTML += getDialogTemplate(pokemon);
 }
 
+function getArrowHTML(currentId) {
+    const currentIndex = loadedPokemon.findIndex(p => p.id === currentId);
+    const isFirst = currentIndex === 0;
+    const isLast = currentIndex === loadedPokemon.length - 1;
+    const leftArrow = !isFirst 
+        ? `<div class="arrow-left"><img class="arrow-icon" src="./assets/icons/arrow-back.png" alt="Backward Click" onclick="prevPokemon()"></div>` 
+        : `<div class="arrow-left"></div>`;
+    const rightArrow = !isLast
+        ? `<div class="arrow-right"><img class="arrow-icon" src="./assets/icons/arrow-forward.png" alt="Forward Click" onclick="nextPokemon()"></div>` 
+        : `<div class="arrow-right"></div>`;
+    return leftArrow + rightArrow;
+}
+
 function openDialog(id) {
     currentPokemonId = id;
     renderDialog(currentPokemonId);
@@ -28,16 +41,18 @@ function closeDialog() {
 
 function nextPokemon() {
     const currentIndex = loadedPokemon.findIndex(pokemon => pokemon.id === currentPokemonId);
-    const nextIndex = (currentIndex + 1) % loadedPokemon.length;
-    currentPokemonId = loadedPokemon[nextIndex].id;
-    renderDialog(currentPokemonId);
+    if (currentIndex < loadedPokemon.length - 1) {
+        currentPokemonId = loadedPokemon[currentIndex + 1].id;
+        renderDialog(currentPokemonId);
+    }
 }
 
 function prevPokemon() {
     const currentIndex = loadedPokemon.findIndex(pokemon => pokemon.id === currentPokemonId);
-    const prevIndex = (currentIndex - 1 + loadedPokemon.length) % loadedPokemon.length;
-    currentPokemonId = loadedPokemon[prevIndex].id;
-    renderDialog(currentPokemonId);
+    if (currentIndex > 0) {
+        currentPokemonId = loadedPokemon[currentIndex - 1].id;
+        renderDialog(currentPokemonId);
+    }
 }
 
 function showTabContentDetailCard(id) {

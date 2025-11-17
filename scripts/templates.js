@@ -40,8 +40,7 @@ function getDialogTemplate(pokemon) {
                 }
             </div>
             <div class="arrow-area">
-                <img class="arrow-icon" src="./assets/icons/arrow-back.png" alt="Backward Click" aria-label="Backward button" onclick="prevPokemon()">
-                <img class="arrow-icon" src="./assets/icons/arrow-forward.png" alt="Forward Click" aria-label="Forward button" onclick="nextPokemon()">
+                ${getArrowHTML(pokemon.id)}
             </div>
             <div class="white-area"></div>
         </div>
