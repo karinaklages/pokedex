@@ -11,6 +11,15 @@ const BASE_URL = "https://pokeapi.co/api/v2/";
 
 // Functions
 
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("searchInput");
+
+    input.addEventListener("input", function () {
+        const txt = this.value.trim();
+        document.getElementById("submitButton").disabled = txt.length < 3;
+    });
+});
+
 async function init() {
     await fetchPokemon();
     renderPokemon(loadedPokemon);
@@ -86,11 +95,20 @@ function renderPokemon(pokemonArray) {
 function searchPokemonByName() {
     const searchInput = document.getElementById("searchInput").value;
     const lowerInput = searchInput.toLowerCase().trim();
+    document.getElementById("submitButton").disabled = true;
     if (lowerInput.length > 0 && lowerInput.length < 3) {
         document.getElementById("alert").classList.remove('d_none');
+        filterAndRenderPokemon(lowerInput);
         return;
     }
+    document.getElementById("alert").classList.add('d_none');
     filterAndRenderPokemon(lowerInput);
+}
+
+function checkInput(element) {
+    if (element.value.trim() === "") {
+        window.location.href = "index.html";
+    }
 }
 
 function filterAndRenderPokemon(lowerInput) {
