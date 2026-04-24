@@ -8,6 +8,8 @@
 Pokédex is part of the Developer Akademie's training programme for software developers (www.developerakademie.com). 
 <br><br>
 
+[Live View](https://pokedex.karina-klages.de)</p>
+
 ###
 
 ![Pokédex](./assets/img/pokedex-1.jpg)<br>
